@@ -16,7 +16,7 @@ timezone: America/Denver
 
 title: birdinator # the main title
 
-tagline: CTF Writups and Projects # it will display as the subtitle
+tagline: CTF Writeups and Projects # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   CTF challenges, writeups, and projects by birdinator.
