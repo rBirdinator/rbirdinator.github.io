@@ -3,7 +3,7 @@
 # and put this post's images in assets/img/posts/event-challenge/ (same name, no date).
 # Folders starting with "_" like _templates/ are not published, so this file never shows on the site.
 title: "Prescience Writeup"
-date: 2026-01-01 12:00:00 -0700 # must not be in the future, or the post is hidden
+date: 2026-10-30 12:00:00 -0700 # must not be in the future, or the post is hidden
 categories: [CTF, Saintcon2026] # max 2 levels
 tags: [pwn] # lowercase, e.g. pwn, rev, crypto, forensics, jwt
 description: A ret2libc pwn challenge.
