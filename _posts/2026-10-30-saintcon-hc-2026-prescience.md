@@ -15,7 +15,7 @@ description: A ret2libc pwn challenge.
 ## Starting Off
 
 We are given our binary, `ret2libc`, and the libc binary from the system, `libc.so.6`. The name of the files should be a good hint of where to start lol, but when we run `file ret2libc` we see:
-```
+``` 
 ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=5a41d8630b66d20328d6d367298dc01079b8ad02, for GNU/Linux 3.2.0, not stripped
 ```
 
@@ -28,7 +28,7 @@ Looking at that decompilation, we see it says "Say something: " and then calls `
 Next, we look at the stack and see what we have to work with. Well, basically nothing when we first look at it... but WAIT! There's more! Because `input` is the only variable in this function, we can actually overwrite `rip` to return to wherever we want. Sweet, we just need to overwrite that 64 byte char + 8 bytes for `rbp`, and we're at `rip`.
 
 So where do we return? I assumed our `pop_rdi_ret` would be important, and if we look it literally only does 
-```
+``` asm
 POP RDI
 RET
 ```
